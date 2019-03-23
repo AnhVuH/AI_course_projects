@@ -360,7 +360,7 @@ def dfs_search(initial_state):
 
 			if state.action != "Initial":
 				path.append(state.action)
-			path_to_goal = str(path)
+			path_to_goal = str(list(path))
 			cost_of_path = len(path)
 			search_depth = len(path)
 			if max_search_depth < level:
@@ -426,7 +426,7 @@ def A_star_search(initial_state):
 
         children = state.expand()
         level +=1
-        
+
 
 
         if level > max_search_depth:
